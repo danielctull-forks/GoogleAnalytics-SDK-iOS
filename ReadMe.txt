@@ -1,4 +1,4 @@
-Google Analytics iOS SDK version 1.3.
+Google Analytics iOS SDK version 1.4.
 
 Copyright 2011 Google, Inc. All rights reserved.
 
@@ -51,17 +51,21 @@ Mac OS X v10.6+, iPhone OS 3.0+
 ================================================================================
 PACKAGING LIST:
 
-Library
+Library/
   GANTracker.h
   libGoogleAnalytics.a
   libGoogleAnalytics_NoThumb.a
 
-Examples/BasicExample
-  BasicExample.xcodeproj
-  BasicExampleDelegate.h
-  BasicExampleDelegate.m
-  info.plist
-  main.m
-  MainWindow.xib
+Examples/
+  BasicExample/
+    BasicExample.xcodeproj/
+      project.pbxproj
+    BasicExample_Prefix.pch
+    Classes/
+      BasicExampleAppDelegate.h
+      BasicExampleAppDelegate.m
+    Info.plist
+    MainWindow.xib
+    main.m
 
 ================================================================================

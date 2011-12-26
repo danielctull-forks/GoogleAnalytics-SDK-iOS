@@ -1,21 +1,40 @@
 //
 //  GANTracker.h
-//  Google Analytics iOS SDK.
-//  Version: 1.3
+//  Google Analytics iOS SDK
+//  Version: 1.4
 //
 //  Copyright 2009 Google Inc. All rights reserved.
 //
 
+// Error constants
 extern NSString* const kGANTrackerErrorDomain;
-extern NSInteger const kGANTrackerNotStartedError;
-extern NSInteger const kGANTrackerInvalidInputError;
-extern NSInteger const kGANTrackerEventsPerSessionLimitError;
-extern NSInteger const kGANTrackerDatabaseError;
-extern NSUInteger const kGANMaxCustomVariables;
-extern NSUInteger const kGANMaxCustomVariableLength;
-extern NSUInteger const kGANVisitorScope;
-extern NSUInteger const kGANSessionScope;
-extern NSUInteger const kGANPageScope;
+
+typedef enum {
+  // This error code is returned when input to a method is incorrect.
+  kGANTrackerInvalidInputError = 0xbade7a9,
+
+  // This error code is returned when the number of hits generated in a session
+  // exceeds the limit (currently 500).
+  kGANTrackerEventsPerSessionLimitError = 0xbad5704e,
+
+  // This error code is returned if the method called requires that the tracker
+  // be started.
+  kGANTrackerNotStartedError = 0xbada55,
+
+  // This error code is returned if the method call resulted in some sort of
+  // database error.
+  kGANTrackerDatabaseError = 0xbadbaddb
+} GANErrorCode;
+
+// Custom Variable constants
+#define kGANMaxCustomVariables 5
+#define kGANMaxCustomVariableLength 64
+
+typedef enum {
+  kGANVisitorScope = 1U,
+  kGANSessionScope = 2U,
+  kGANPageScope = 3U
+} GANCVScope;
 
 @protocol GANTrackerDelegate;
 typedef struct __GANTrackerPrivate GANTrackerPrivate;
@@ -25,46 +44,52 @@ typedef struct __GANTrackerPrivate GANTrackerPrivate;
 @interface GANTracker : NSObject {
  @private
   GANTrackerPrivate *private_;
-
-  // debug flag results in debug messages being written to the log.  Useful
-  // for debugging calls to the Google Analytics SDK.
   BOOL debug_;
-
-  // dryRun flag results in hits not actually being sent to Google Analytics.
-  // Useful for testing and debugging calls to the Google Analytics SDK.
   BOOL dryRun_;
-
-  // anonymizeIp flag tells Google Analytics to anonymize the information
-  // sent by the SDK by removingthe last octet of the IP address prior to its
-  // storage.
   BOOL anonymizeIp_;
-
-  // sampleRate flag sets the new sample rate. If your applications is subject
-  // to heavy traffic spikes, then setting the sample rate ensures
-  // un-interrupted report tracking. Sampling in Google Analytics occurs
-  // consistently across unique visitors, so there is integrity in trending
-  // and reporting even when sampling is enabled, because unique visitors
-  // remain included or excluded from the sample, as set from the initiation
-  // of sampling.
-  //
-  // Values of sampleRate are a percentage between 0 and 100. The default of 100
-  // signifies no sampling. A value of 90 requests 90% of visitors to be
-  // sampled (10% of visitors to be sampled out).
   NSUInteger sampleRate_;
 }
 
+// If the debug flag is set, debug messages will be written to the log.
+// It is useful for debugging calls to the Google Analytics SDK.
+// By default, the debug flag is disabled.
 @property(readwrite) BOOL debug;
+
+// If the dryRun flag is set, hits will not be sent to Google Analytics.
+// It is useful for testing and debugging calls to the Google Analytics SDK.
+// By default, the dryRun flag is disabled.
 @property(readwrite) BOOL dryRun;
+
+// If the anonymizeIp flag is set, the SDK will anonymize information sent to
+// Google Analytics by setting the last octet of the IP address to zero prior
+// to its storage and/or submission.
+// By default, the anonymizeIp flag is disabled.
 @property(readwrite) BOOL anonymizeIp;
+
+// The sampleRate parameter controls the probability that the visitor will be
+// sampled. When a visitor is not sampled, no data is submitted to Google
+// Analytics about that visitor's activity. If your application is subject to
+// heavy traffic spikes, you may wish to adjust the sample rate to ensure
+// uninterrupted report tracking. Sampling in Google Analytics occurs
+// consistently across unique visitors, ensuring integrity in trending and
+// reporting even when sampling is enabled, because unique visitors remain
+// included or excluded from the sample, as set from the initiation of
+// sampling.
+//
+// By default, sampleRate is 100, which signifies no sampling. sampleRate may
+// be set to any integer value between 0 and 100, inclusive. A value of 90
+// requests 90% of visitors to be sampled (10% of visitors to be sampled out).
 @property(readwrite) NSUInteger sampleRate;
 
 // Singleton instance of this class for convenience.
 + (GANTracker *)sharedTracker;
 
-// Start the tracker by specifying a Google Analytics account ID and a
-// dispatch period (in seconds) to dispatch events to the server
-// (or -1 to dispatch manually). An optional delegate may be
-// supplied.
+// Start the tracker with the specified Google Analytics account ID (the string
+// that begins with "UA-") and desired automatic dispatch period (in seconds).
+// The dispatcher will dispatch events, if any, every |dispatchPeriod| seconds.
+// If a non-positive (e.g. 0 or -1) dispatch period is given, automatic
+// dispatch will not be enabled, and the application will need to dispatch
+// events manually. An optional delegate may be supplied.
 - (void)startTrackerWithAccountID:(NSString *)accountID
                    dispatchPeriod:(NSInteger)dispatchPeriod
                          delegate:(id<GANTrackerDelegate>)delegate;
@@ -99,7 +124,7 @@ typedef struct __GANTrackerPrivate GANTrackerPrivate;
 - (BOOL)setCustomVariableAtIndex:(NSUInteger)index
                             name:(NSString *)name
                            value:(NSString *)value
-                           scope:(NSUInteger)scope
+                           scope:(GANCVScope)scope
                        withError:(NSError **)error;
 
 // Set a page scoped custom variable.  The variable set is returned with the
@@ -164,6 +189,12 @@ typedef struct __GANTrackerPrivate GANTrackerPrivate;
 // Manually dispatch pageviews/events to the server. Returns YES if
 // a new dispatch starts.
 - (BOOL)dispatch;
+
+// Manually dispatch pageviews/events to the server synchronously until timeout
+// time has elapsed.  Returns YES upon completion if there were hits to send and
+// all hits were sent successfully. Call this method with care as it will block
+// all GANTracker activity until it is done.
+- (BOOL)dispatchSynchronous:(NSTimeInterval)timeout;
 
 @end
 
