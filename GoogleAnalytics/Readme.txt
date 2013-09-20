@@ -1,4 +1,4 @@
-Google Analytics iOS SDK version 3.0
+Google Analytics iOS SDK version 3.01
 Copyright 2009 - 2013 Google, Inc. All rights reserved.
 
 ================================================================================
@@ -14,7 +14,7 @@ and GAITracker.h) and libGoogleAnalyticsV3(?).a to your XCode project. You must
 also include the CoreData framework in your project.
 
 To use a version of the library with debug symbols intact, link against
-libGoogleAnalyticsV3(?)_debug.a instead of libGoogleAnalytics.a. This may be
+libGoogleAnalytics_debug.a instead of libGoogleAnalyticsServices.a. This may be
 useful if you experience exceptions or crashes originating in the SDK.
 
 See the Examples/CuteAnimals application for an illustration of how to use

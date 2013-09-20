@@ -1,6 +1,11 @@
 Google Tag Manager SDK for iOS Change Log
 
 --------------------------------------------
+Version: 3.01 (September, 2013)
+--------------------------------------------
+* Fixed link error when targeting iOS 7.0
+
+--------------------------------------------
 Version: 3.0 (August 16, 2013)
 --------------------------------------------
 * Added support for AdWords Conversion Tracking Tag, AdWords Remarketing Tag,

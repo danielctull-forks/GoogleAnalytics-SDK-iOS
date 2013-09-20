@@ -1,7 +1,12 @@
 Google Analytics SDK for iOS Changelog
 
 --------------------------------------------
-Version: 3.0.0 (August 2013)
+Version: 3.01 (September 2013)
+-------------------------------------------
+* Fixed link error when targeting iOS 7.0.
+
+--------------------------------------------
+Version: 3.00 (August 2013)
 -------------------------------------------
 * SDK API change to align with analytics.js. The track<hittype> and
   send<hittype> methods have been removed.  Use send and the
