@@ -44,6 +44,7 @@
 		47EC965217A19FDD00D685C9 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EC965117A19FDD00D685C9 /* Utils.m */; };
 		47EC965417A1C9EB00D685C9 /* GTM-XXXX in Resources */ = {isa = PBXBuildFile; fileRef = 47EC965317A1C9EB00D685C9 /* GTM-XXXX */; };
 		47EC965A17A1CCDE00D685C9 /* Container.png in Resources */ = {isa = PBXBuildFile; fileRef = 47EC965917A1CCDE00D685C9 /* Container.png */; };
+		88196395180DC0A400109ED5 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 88196394180DC0A400109ED5 /* libz.dylib */; };
 		88679A8C17A1841C00F476D5 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88679A8B17A1841C00F476D5 /* libGoogleAnalyticsServices.a */; };
 		F4FE3F5617555573000A691A /* GTM-XXXX.plist in Resources */ = {isa = PBXBuildFile; fileRef = F4FE3F5517555573000A691A /* GTM-XXXX.plist */; };
 /* End PBXBuildFile section */
@@ -98,6 +99,7 @@
 		47EC965117A19FDD00D685C9 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = SOURCE_ROOT; };
 		47EC965317A1C9EB00D685C9 /* GTM-XXXX */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GTM-XXXX"; sourceTree = SOURCE_ROOT; };
 		47EC965917A1CCDE00D685C9 /* Container.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Container.png; path = Images/Container.png; sourceTree = SOURCE_ROOT; };
+		88196394180DC0A400109ED5 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		88679A8B17A1841C00F476D5 /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = ../../libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		F41DE61E171DB8A500960CB7 /* TAGContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGContainer.h; sourceTree = "<group>"; };
 		F41DE620171DB8A500960CB7 /* TAGManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGManager.h; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				113B6F2B153E208D003CAC38 /* CoreData.framework in Frameworks */,
 				113B6EE8153E1F0B003CAC38 /* UIKit.framework in Frameworks */,
 				113B6EEA153E1F0B003CAC38 /* Foundation.framework in Frameworks */,
+				88196395180DC0A400109ED5 /* libz.dylib in Frameworks */,
 				88679A8C17A1841C00F476D5 /* libGoogleAnalyticsServices.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +147,7 @@
 		113B6EE6153E1F0B003CAC38 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				88196394180DC0A400109ED5 /* libz.dylib */,
 				47CD7CF017BACB30008840A0 /* AdSupport.framework */,
 				115686551593CE6A00A5D031 /* SystemConfiguration.framework */,
 				113B6F2A153E208D003CAC38 /* CoreData.framework */,

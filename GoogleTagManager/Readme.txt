@@ -32,3 +32,4 @@ Your application must link to the following frameworks:
   Foundation.framework
   SystemConfiguration.framework
   UIKit.framework
+  libz.dylib

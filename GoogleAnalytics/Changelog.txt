@@ -1,6 +1,12 @@
 Google Analytics SDK for iOS Changelog
 
 --------------------------------------------
+Version: 3.02 (October 2013)
+-------------------------------------------
+* Fixed conflict with protocol buffer SDK.
+* Fixed linker error when code stripping was enabled.
+
+--------------------------------------------
 Version: 3.01 (September 2013)
 -------------------------------------------
 * Fixed link error when targeting iOS 7.0.

@@ -1,4 +1,4 @@
-Google Analytics iOS SDK version 3.01
+Google Analytics iOS SDK version 3.02
 Copyright 2009 - 2013 Google, Inc. All rights reserved.
 
 ================================================================================
@@ -56,6 +56,7 @@ iOS 5.0 or later.
 Your app must link the following frameworks:
   CoreData.framework
   SystemConfiguration.framework
+  libz.dylib
 
 ================================================================================
 PACKAGING LIST:
@@ -67,7 +68,6 @@ Library/ (contains header and library files to compile and link with)
   GAILogger.h
   GAITrackedViewController.h
   GAITracker.h
-  libGoogleAnalytics.a
   libGoogleAnalytics_debug.a
 Examples/ (contains an example tracked application)
 Documentation/ (contains documentation)
