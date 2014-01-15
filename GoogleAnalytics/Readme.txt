@@ -1,5 +1,5 @@
-Google Analytics iOS SDK version 3.02
-Copyright 2009 - 2013 Google, Inc. All rights reserved.
+Google Analytics iOS SDK version 3.03
+Copyright 2009 - 2014 Google, Inc. All rights reserved.
 
 ================================================================================
 DESCRIPTION:
@@ -46,7 +46,8 @@ using HTTP or HTTPS requests to a Google Analytics server.
 BUILD REQUIREMENTS:
 
 Mac OS X 10.6 or later.
-XCode with iOS SDK 5.0 or later.
+XCode 5.0 or later
+iOS SDK 5.0 or later (6.0 or later for 64-bit).
 
 ================================================================================
 RUNTIME REQUIREMENTS:
@@ -54,6 +55,7 @@ RUNTIME REQUIREMENTS:
 iOS 5.0 or later.
 
 Your app must link the following frameworks:
+  AdSupport.framework
   CoreData.framework
   SystemConfiguration.framework
   libz.dylib
@@ -68,7 +70,6 @@ Library/ (contains header and library files to compile and link with)
   GAILogger.h
   GAITrackedViewController.h
   GAITracker.h
-  libGoogleAnalytics_debug.a
 Examples/ (contains an example tracked application)
 Documentation/ (contains documentation)
 

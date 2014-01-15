@@ -1,6 +1,11 @@
 Google Tag Manager SDK for iOS Change Log
 
 --------------------------------------------
+Version: 3.03 (January, 2014)
+--------------------------------------------
+* Added support for 64-bit iOS SDK 7.0.
+
+--------------------------------------------
 Version: 3.02 (October, 2013)
 --------------------------------------------
 * Fixed conflict with Google Games SDK and protocol buffer SDK.

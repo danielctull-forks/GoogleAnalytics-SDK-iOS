@@ -1,6 +1,6 @@
 Google Tag Manager iOS SDK
 
-Copyright 2013 Google, Inc. All rights reserved.
+Copyright 2013-2014 Google, Inc. All rights reserved.
 
 ================================================================================
 DESCRIPTION:
@@ -19,7 +19,8 @@ Details on how to use this SDK are available at:
 BUILD REQUIREMENTS:
 
 Mac OS X 10.6 or later.
-XCode with iOS SDK 6.0 or later.
+XCode 5.0 or later.
+iOS SDK 5.0 or later (6.0 or later for 64-bit).
 
 ================================================================================
 RUNTIME REQUIREMENTS:

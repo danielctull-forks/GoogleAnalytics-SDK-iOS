@@ -1,6 +1,14 @@
 Google Analytics SDK for iOS Changelog
 
 --------------------------------------------
+Version: 3.03 (January 2014)
+-------------------------------------------
+* Support 64-bit iOS 7.0 SDK.
+* Removed libGoogleAnalytics_debug.a, it’s part of the libGoogleAnalyticsServices.a
+  library.
+* Cleaned up CuteAnimals build file for Google Analytics.
+
+--------------------------------------------
 Version: 3.02 (October 2013)
 -------------------------------------------
 * Fixed conflict with protocol buffer SDK.
