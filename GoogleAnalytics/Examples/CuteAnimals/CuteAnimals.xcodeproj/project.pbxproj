@@ -40,7 +40,6 @@
 		11FCCC45156189A600949704 /* Tiger-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 11FCCC33156189A600949704 /* Tiger-2.jpg */; };
 		2064AD26180DF71C005880C9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2064AD25180DF71C005880C9 /* libz.dylib */; };
 		88679A8E17A184FA00F476D5 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88679A8D17A184FA00F476D5 /* libGoogleAnalyticsServices.a */; };
-		BF04BE4B186E4C5800BC3415 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF04BE4A186E4C5800BC3415 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F7C47F21178B5B56003A7D0F /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F7C47F20178B5B55003A7D0F /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
@@ -101,7 +100,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF04BE4B186E4C5800BC3415 /* AdSupport.framework in Frameworks */,
 				2064AD26180DF71C005880C9 /* libz.dylib in Frameworks */,
 				115686561593CE6A00A5D031 /* SystemConfiguration.framework in Frameworks */,
 				113B6F2B153E208D003CAC38 /* CoreData.framework in Frameworks */,

@@ -1,4 +1,4 @@
-Google Analytics iOS SDK version 3.03
+Google Analytics iOS SDK version 3.03a
 Copyright 2009 - 2014 Google, Inc. All rights reserved.
 
 ================================================================================
@@ -55,7 +55,6 @@ RUNTIME REQUIREMENTS:
 iOS 5.0 or later.
 
 Your app must link the following frameworks:
-  AdSupport.framework
   CoreData.framework
   SystemConfiguration.framework
   libz.dylib

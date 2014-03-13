@@ -1,6 +1,19 @@
 Google Tag Manager SDK for iOS Change Log
 
 --------------------------------------------
+Version: 3.03c (February, 2014)
+--------------------------------------------
+* Functions that call AdSupport.framework API are broken out into a separate
+  library, libAdIdAccess.a. Apps need to link with that library to have access
+  to the advertising identifier (IDFA) string and advertiser tracking enabled
+  flag.
+
+--------------------------------------------
+Version: 3.03a (February, 2014)
+--------------------------------------------
+* No Changes.
+
+--------------------------------------------
 Version: 3.03 (January, 2014)
 --------------------------------------------
 * Added support for 64-bit iOS SDK 7.0.

@@ -28,9 +28,14 @@ RUNTIME REQUIREMENTS:
 iOS 5.0 or later
 
 Your application must link to the following frameworks:
-  AdSupport.framework
   CoreData.framework
   Foundation.framework
   SystemConfiguration.framework
   UIKit.framework
   libz.dylib
+
+If you wish to have access to the advertising identifier (IDFA) string and
+advertiser tracking enabled flag, the following are also required:
+  AdSupport.framework
+  libAdIdAccess.a (included)
+
