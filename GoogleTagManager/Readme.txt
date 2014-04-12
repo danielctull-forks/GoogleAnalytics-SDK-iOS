@@ -32,10 +32,16 @@ Your application must link to the following frameworks:
   Foundation.framework
   SystemConfiguration.framework
   UIKit.framework
+  libsqlite3.dylib
   libz.dylib
 
 If you wish to have access to the advertising identifier (IDFA) string and
 advertiser tracking enabled flag, the following are also required:
   AdSupport.framework
   libAdIdAccess.a (included)
+
+In order to ensure that the libAdIdAccess.a code doesn't get dead-stripped
+from your executable during linking, you'll need to either add the -all_load
+or -ObjC flag to the "Other Linker Flags", or, for finer-grained control, add the
+-force_load flag (followed by a full pathname to libAdIdAccess.a).
 

@@ -1,6 +1,11 @@
 Google Tag Manager SDK for iOS Change Log
 
 --------------------------------------------
+Version: 3.06 (March, 2014)
+--------------------------------------------
+* Added support for Google Analytics Content Experiments Macro.
+
+--------------------------------------------
 Version: 3.03c (February, 2014)
 --------------------------------------------
 * Functions that call AdSupport.framework API are broken out into a separate

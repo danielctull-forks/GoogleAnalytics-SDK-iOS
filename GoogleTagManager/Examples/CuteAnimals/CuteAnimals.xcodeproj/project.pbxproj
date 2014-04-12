@@ -38,8 +38,10 @@
 		11FCCC43156189A600949704 /* Monkey-5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 11FCCC31156189A600949704 /* Monkey-5.jpg */; };
 		11FCCC44156189A600949704 /* Tiger-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 11FCCC32156189A600949704 /* Tiger-1.jpg */; };
 		11FCCC45156189A600949704 /* Tiger-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 11FCCC33156189A600949704 /* Tiger-2.jpg */; };
+		473D8327189826ED00C8E4D1 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 473D8326189826ED00C8E4D1 /* libsqlite3.dylib */; };
 		47CD7CE717BAA2B1008840A0 /* CustomTagHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CD7CE617BAA2B1008840A0 /* CustomTagHandler.m */; };
 		47CD7CED17BAA447008840A0 /* CustomMacroHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 47CD7CEC17BAA447008840A0 /* CustomMacroHandler.m */; };
+		47CD7CF117BACB30008840A0 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47CD7CF017BACB30008840A0 /* AdSupport.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		47EC965217A19FDD00D685C9 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 47EC965117A19FDD00D685C9 /* Utils.m */; };
 		47EC965417A1C9EB00D685C9 /* GTM-XXXX in Resources */ = {isa = PBXBuildFile; fileRef = 47EC965317A1C9EB00D685C9 /* GTM-XXXX */; };
 		47EC965A17A1CCDE00D685C9 /* Container.png in Resources */ = {isa = PBXBuildFile; fileRef = 47EC965917A1CCDE00D685C9 /* Container.png */; };
@@ -88,10 +90,12 @@
 		11FCCC31156189A600949704 /* Monkey-5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Monkey-5.jpg"; path = "Images/Monkey-5.jpg"; sourceTree = SOURCE_ROOT; };
 		11FCCC32156189A600949704 /* Tiger-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Tiger-1.jpg"; path = "Images/Tiger-1.jpg"; sourceTree = SOURCE_ROOT; };
 		11FCCC33156189A600949704 /* Tiger-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Tiger-2.jpg"; path = "Images/Tiger-2.jpg"; sourceTree = SOURCE_ROOT; };
+		473D8326189826ED00C8E4D1 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		47CD7CE517BAA2B1008840A0 /* CustomTagHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTagHandler.h; sourceTree = SOURCE_ROOT; };
 		47CD7CE617BAA2B1008840A0 /* CustomTagHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomTagHandler.m; sourceTree = SOURCE_ROOT; };
 		47CD7CEB17BAA447008840A0 /* CustomMacroHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMacroHandler.h; sourceTree = SOURCE_ROOT; };
 		47CD7CEC17BAA447008840A0 /* CustomMacroHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomMacroHandler.m; sourceTree = SOURCE_ROOT; };
+		47CD7CF017BACB30008840A0 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		47EC964F17A19FC900D685C9 /* TAGDataLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAGDataLayer.h; sourceTree = "<group>"; };
 		47EC965017A19FDD00D685C9 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = SOURCE_ROOT; };
 		47EC965117A19FDD00D685C9 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = SOURCE_ROOT; };
@@ -111,6 +115,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				473D8327189826ED00C8E4D1 /* libsqlite3.dylib in Frameworks */,
+				47CD7CF117BACB30008840A0 /* AdSupport.framework in Frameworks */,
 				115686561593CE6A00A5D031 /* SystemConfiguration.framework in Frameworks */,
 				113B6F2B153E208D003CAC38 /* CoreData.framework in Frameworks */,
 				113B6EE8153E1F0B003CAC38 /* UIKit.framework in Frameworks */,
@@ -144,7 +150,9 @@
 		113B6EE6153E1F0B003CAC38 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				473D8326189826ED00C8E4D1 /* libsqlite3.dylib */,
 				88196394180DC0A400109ED5 /* libz.dylib */,
+				47CD7CF017BACB30008840A0 /* AdSupport.framework */,
 				115686551593CE6A00A5D031 /* SystemConfiguration.framework */,
 				113B6F2A153E208D003CAC38 /* CoreData.framework */,
 				113B6EE7153E1F0B003CAC38 /* UIKit.framework */,
