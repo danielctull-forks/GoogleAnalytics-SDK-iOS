@@ -1,4 +1,11 @@
-Google Tag Manager SDK for iOS Change Log
+Google Tag Manager SDK for iOS Changelog
+
+--------------------------------------------
+Version: 3.07 (May, 2014)
+--------------------------------------------
+* Fixed a bug in Id for Advertising Macro so that it can correctly
+  return identifier for advertiser(IDFA) if available.
+* Fixed an issue so users can use NSNumber for ecommerce data.
 
 --------------------------------------------
 Version: 3.06 (March, 2014)

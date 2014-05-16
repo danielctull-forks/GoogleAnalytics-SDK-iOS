@@ -1,9 +1,15 @@
 Google Analytics SDK for iOS Changelog
 
 --------------------------------------------
+Version: 3.07 (May 2014)
+-------------------------------------------
+* Added User Id field.
+* Fixed an issue so GTM users can use NSNumber for ecommerce data.
+
+--------------------------------------------
 Version: 3.06 (March 2014)
 -------------------------------------------
-* No change.
+* SDK will now populate the Application Id parameter (&aid) by default.
 
 --------------------------------------------
 Version: 3.03c (February 2014)
