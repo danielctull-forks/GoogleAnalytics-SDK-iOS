@@ -1,6 +1,23 @@
 Google Analytics SDK for iOS Changelog
 
 --------------------------------------------
+Version: 3.08 (June 2014)
+-------------------------------------------
+* The SDK will now collect IDFA and the advertiser tracking enabled flag if the
+  library libAdIdAccess.a (provided as part of the SDK) is included in the
+  application and the allowIDFACollection property is set to true on the
+  tracker.
+* Enhanced Ecommerce support has been added.
+* Added screenview hit type to replace appview hit type.
+* A hit id parameter is now added to each hit.  It is changed every time an
+  appview, screenview or pageview hit is generated.
+* ClientId will now be reset every time the idfa value is changes.  This only
+  happens when idfa is collected in a tracker.
+* A new dispatchWithCompletionHandler method has been added to the GAI class.
+* Fixed an issue where the SDK could send a beacon without a clientId or
+  with an empty clientId.
+
+--------------------------------------------
 Version: 3.07 (May 2014)
 -------------------------------------------
 * Added User Id field.
