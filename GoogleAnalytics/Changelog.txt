@@ -1,6 +1,11 @@
 Google Analytics SDK for iOS Changelog
 
 --------------------------------------------
+Version: 3.09 (July 2014)
+-------------------------------------------
+* No change.
+
+--------------------------------------------
 Version: 3.08 (June 2014)
 -------------------------------------------
 * The SDK will now collect IDFA and the advertiser tracking enabled flag if the

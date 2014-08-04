@@ -1,6 +1,13 @@
 Google Tag Manager SDK for iOS Changelog
 
 --------------------------------------------
+Version: 3.09 (July, 2014)
+--------------------------------------------
+* Added support for Enhanced Ecommerce to Google Universal Analytics tag.
+* Added dispatch: and dispatchWithCompletionHandler: method to TAGManager to
+  support sending pending network traffic on demand.
+
+--------------------------------------------
 Version: 3.08 (June, 2014)
 --------------------------------------------
 * No Changes
