@@ -1,6 +1,11 @@
 Google Analytics SDK for iOS Changelog
 
 --------------------------------------------
+Version: 3.13 (July 2015)
+--------------------------------------------
+* Fixed an issue which caused crashes when using setCampaignParametersFromUrl.
+
+--------------------------------------------
 Version: 3.12 (April 2015)
 --------------------------------------------
 * No change.

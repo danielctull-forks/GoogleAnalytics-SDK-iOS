@@ -1,6 +1,6 @@
 Google Tag Manager iOS SDK
 
-Copyright 2013-2014 Google, Inc. All rights reserved.
+Copyright 2013-2015 Google, Inc. All rights reserved.
 
 ================================================================================
 DESCRIPTION:
